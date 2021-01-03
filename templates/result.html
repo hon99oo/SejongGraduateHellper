@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="circle-progress.js"></script>
+        <script src="https://kit.fontawesome.com/e8a335040d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
+            rel="stylesheet">
+        <title>result</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <img src="LogoMakr-4uW6co.png"/>
+
+            </div>
+
+            <ul class="navbar_menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Signup</a>
+                </li>
+            </ul>
+
+            <a href="#" class="navbar_toggle">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+
+        <div class="lcontainer">
+            <div class="fcontainer">
+                <div class="resultbox container0">
+                    <div class="name name0">Total
+
+                    </div>
+                    <div class="box">
+                        <div id="chart0">
+                            <strong class="total_strong"></strong>
+                        </div>
+                        <div class="Sbox"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rcontainer">
+                <div class="resultbox container1">
+                    <div class="name name1">전공 필수
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+                        <div id="chart1">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container2">
+                    <div class="name name1">전공 선택
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart2">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container3">
+                    <div class="name name1">중핵 필수
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart3">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container4">
+                    <div class="name name1">중핵 선택
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart4">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container5">
+                    <div class="name name1">교양 필수
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart5">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container6">
+                    <div class="name name1">교양 선택
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart6">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container7">
+                    <div class="name name1">고전 독서 인증
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart7">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+                <div class="resultbox container8">
+                    <div class="name name1">영어 인증
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="box">
+
+                        <div id="chart8">
+                            <strong></strong>
+                        </div>
+                        <div class="sbox"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script>
+        var pernum1 = 65;
+        $('#chart0')
+            .circleProgress({
+                value: pernum1 / 100,
+                startAngle: 300,
+                size: 250,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 15,
+                fill: {
+                    gradient: ["blue", "skyblue"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum1 * progress) + '<i>%</i>');
+            });
+        var pernum1 = 75;
+        $('#chart1')
+            .circleProgress({
+                value: pernum1 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum1 * progress) + '<i>%</i>');
+            });
+        var pernum2 = 60;
+        $('#chart2')
+            .circleProgress({
+                value: pernum2 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum2 * progress) + '<i>%</i>');
+            });
+        var pernum3 = 7;
+        $('#chart3')
+            .circleProgress({
+                value: pernum3 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum3 * progress) + '<i>%</i>');
+            });
+        var pernum4 = 20;
+        $('#chart4')
+            .circleProgress({
+                value: pernum4 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum4 * progress) + '<i>%</i>');
+            });
+        var pernum5 = 75;
+        $('#chart5')
+            .circleProgress({
+                value: pernum5 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum5 * progress) + '<i>%</i>');
+            });
+        var pernum6 = 100;
+        $('#chart6')
+            .circleProgress({
+                value: pernum6 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum6 * progress) + '<i>%</i>');
+            });
+        var pernum7 = 100;
+        $('#chart7')
+            .circleProgress({
+                value: pernum7 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum7 * progress) + '<i>%</i>');
+            });
+        var pernum8 = 100;
+        $('#chart8')
+            .circleProgress({
+                value: pernum8 / 100,
+                startAngle: 300,
+                size: 150,
+                animation: {
+                    duration: 2200,
+                    easing: "swing"
+                },
+                thickness: 13,
+                fill: {
+                    gradient: ["red", "orange"]
+                }
+            })
+            .on('circle-animation-progress',
+            //그래프 애니메이션이 진행되는 동안
+            function (event, progress, stepValue) {
+
+                //progress -현재 진행상탱 0.0~1.0 stepValue - 현재까지 그려진 그래프 값
+                $(this)
+                    .find('strong')
+                    .html(Math.round(pernum8 * progress) + '<i>%</i>');
+            });
+    </script>
+    <script>
+        const toggleb = document.querySelector('.navbar_toggle');
+        const menu = document.querySelector('.navbar_menu');
+
+        toggleb.addEventListener('click', () => {
+            menu
+                .classList
+                .toggle('active');
+        });
+    </script>
+
+</html>

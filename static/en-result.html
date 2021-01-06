@@ -14,7 +14,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
             rel="stylesheet">
-        <title>result</title>
+        <title>en-result</title>
     </head>
 
     <body>
@@ -42,7 +42,7 @@
         <div class="lcontainer">
             <div class="fcontainer">
                 <div class="resultbox container0">
-                    <div class="name name0">Total
+                    <div class="name name0">공학 인증 Total
 
                     </div>
                     <div class="box">
@@ -86,7 +86,7 @@
 
             <div class="rcontainer">
                 <div class="resultbox container1">
-                    <div class="name name1">전공 필수
+                    <div class="name name1">전공
                         <span class="tooltip t1">
                             <i class="fas fa-question-circle"></i>
                         </span>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="resultbox container2">
-                    <div class="name name1">전공 선택
+                    <div class="name name1">전문 교양
                         <span class="tooltip t2">
                             <i class="fas fa-question-circle"></i>
                         </span>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="resultbox container3">
-                    <div class="name name1">중핵 필수
+                    <div class="name name1">BSM
                         <span class="tooltip t3">
                             <i class="fas fa-question-circle"></i>
                         </span>
@@ -177,171 +177,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="resultbox container4">
-                    <div class="name name1">교양 선택
-                        <span class="tooltip t4">
-                            <i class="fas fa-question-circle"></i>
-                        </span>
-                        <div class="tooltip_text text4">교양 선택 과목을 15학점 이상 이수하고 다섯가지 영역 중 세가지 영역을 채우면 통과할 수 있습니다
-                            <div class="point"></div>
-                        </div>
-                    </div>
-                    <div class="box">
-
-                        <div id="chart4">
-                            <strong></strong>
-                        </div>
-                        <div class="sbox">
-                            <div class="gbox">
-                                <span class="grade">기준 학점
-                                </span>
-                                <span class="r" id="grade4"></span>
-                            </div>
-                            <div>
-                                <div class="gbox">
-                                    <span class="grade">이수 학점
-                                    </span>
-                                    <span class="r" id="mygrade4"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="gbox">
-                                    <span class="grade">이수 영역</span>
-                                    <span class="r" id="myarea1"></span>
-                                </div>
-                            </div>
-                            <button class="rbutton" id="myBtn4">Recommend</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="resultbox container5">
-                    <div class="name name1">교양 필수
-                        <span class="tooltip t5">
-                            <i class="fas fa-question-circle"></i>
-                        </span>
-                        <div class="tooltip_text text5">교양 필수 과목을 모두 이수하면 통과할 수 있습니다
-                            <div class="point"></div>
-                        </div>
-                    </div>
-                    <div class="box">
-
-                        <div id="chart5">
-                            <strong></strong>
-                        </div>
-                        <div class="sbox">
-                            <div class="gbox">
-                                <span class="grade">기준 학점
-                                </span>
-                                <span class="r" id="grade5"></span>
-                            </div>
-                            <div>
-                                <div class="gbox">
-                                    <span class="grade">이수 학점
-                                    </span>
-                                    <span class="r" id="mygrade5"></span>
-                                </div>
-                            </div>
-
-                            <button class="rbutton" id="myBtn5">Recommend</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="resultbox container6">
-                    <div class="name name1">공학 인증
-                        <span class="tooltip t6">
-                            <i class="fas fa-question-circle"></i>
-                        </span>
-                        <div class="tooltip_text text6">공학 인증 과목들을 모두 이수하면 인증할 수 있습니다
-                            <div class="point"></div>
-                        </div>
-                    </div>
-                    <div class="box">
-
-                        <div id="chart6">
-                            <strong></strong>
-                        </div>
-                        <div class="sbox">
-                            <div class="gbox">
-                                <span class="grade">통과 여부
-                                </span>
-                                <span class="r" id="grade6"></span>
-                            </div>
-                            
-                            <button onclick="window.open('en-result.html')" class="rbutton">Recommend</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="resultbox container7">
-                    <div class="name name1">고전 독서 인증
-                        <span class="tooltip t7">
-                            <i class="fas fa-question-circle"></i>
-                        </span>
-                        <div class="tooltip_text text7">동서양(3권) 동양(3권) 서양(3권) 과학사(3권) 4가지영역의 권수를 모두 이수하면 통과할 수 있습니다
-                            <div class="point"></div>
-                        </div>
-                    </div>
-                    <div class="box">
-
-                        <div id="chart7">
-                            <strong></strong>
-                        </div>
-                        <div class="sbox Y">
-                            <div class="gbox">
-                                <span class="grade p">이수 기준
-
-                                </div>
-                                <div class="gbox">
-                                    <span class="grade y">동서양
-                                    </span>
-                                    <span class="book" id="swbook"></span>/ 3권
-                                </div>
-                                <div class="gbox">
-                                    <span class="grade y">동양
-                                    </span>
-                                    <span class="book" id="wbook"></span>/ 3권
-                                </div>
-
-                                <div class="gbox">
-                                    <span class="grade y">서양
-                                    </span>
-                                    <span class="book" id="sbook"></span>/ 3권
-                                </div>
-                                <div class="gbox">
-                                    <span class="grade y">과학사
-                                    </span>
-                                    <span class="book" id="scbook"></span>/ 1권
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resultbox container8">
-                        <div class="name name8">영어 인증
-                            <span class="tooltip t8">
-                                <i class="fas fa-question-circle"></i>
-                            </span>
-                            <div class="tooltip_text text8">TOEIC 700점 이상의 증빙서류를 제출하거나 INTENCIVE 과목을 수료하면 통과할 수 있습니다
-                                <div class="point"></div>
-                            </div>
-                        </div>
-                        <div class="box ">
-
-                            <div id="chart8">
-                                <strong></strong>
-                            </div>
-                            <div class="sbox">
-                                <div class="gbox">
-                                    <span class="grade">통과 여부
-                                    </span>
-                                    
-                                    <span class="r" id="grade8"></span>
-                                </div>
-                                <button class="rbutton" id="myBtn8">Recommend</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                
+              
             </div>
         </body>
         <div id="myModal1" class="modal modal1">
@@ -368,28 +205,7 @@
             </div>
 
         </div>
-        <div id="myModal4" class="modal modal4">
-
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>444444444444444</p>
-            </div>
-
-        </div>
-        <div id="myModal5" class="modal modal5">
-
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>55555555555555555555</p>
-            </div>
-
-        </div>
-        <div id="myModal8" class="modal modal8">
-
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>888888888</p>
-            </div>
+     
 
         </div>
 
@@ -401,40 +217,26 @@
             var Grade1 = 37;
             var Grade2 = 42;
             var Grade3 = 20;
-            var Grade4 = 15;
-            var Grade5 = 20;
-            var Grade6 = "Pass";
-            var Grade7 = "Pass";
-            var Grade8 = "Pass";
+         
 
             var Mygrade1 = 27;
             var Mygrade2 = 30;
             var Mygrade3 = 20;
-            var Mygrade4 = 15;
-            var Mygrade5 = 15;
-          
+           
 
             var Myarea1 = "Pass";
             var Totalgrade = 137;
-            var Mytotalgrade = 137;
+            var Mytotalgrade = 136;
 
            
 
-            var Swbook = 3 + "권";
-            var Wbook = 3 + "권";;
-            var Sbook = 2 + "권";;
-            var Scbook = 0 + "권";;
+          
 
             var pernum0 = (Mytotalgrade / Totalgrade) * 100;
             var pernum1 = (Mygrade1 / Grade1) * 100;
             var pernum2 = (Mygrade2 / Grade2) * 100;
             var pernum3 = (Mygrade3 / Grade3) * 100;
-            var pernum4 = (Mygrade4 / Grade4) * 100;
-            var pernum5 = (Mygrade5 / Grade5) * 100;
-            var pernum6 = 100;
-            var pernum7 = 100;
-            var pernum8 = 100;
-
+           
             if (pernum0 == 100) {
                 var Cangraduate = "축하합니다! 졸업 가능합니다!!";
                 document.querySelector('.T').style.fontSize ='24px';
@@ -453,24 +255,17 @@
             var modal1 = document.getElementById('myModal1');
             var modal2 = document.getElementById('myModal2');
             var modal3 = document.getElementById('myModal3');
-            var modal4 = document.getElementById('myModal4');
-            var modal5 = document.getElementById('myModal5');
-            var modal8 = document.getElementById('myModal8');
-
+          
             var btn1 = document.getElementById("myBtn1");
             var btn2 = document.getElementById("myBtn2");
             var btn3 = document.getElementById("myBtn3");
-            var btn4 = document.getElementById("myBtn4");
-            var btn5 = document.getElementById("myBtn5");
-            var btn8 = document.getElementById("myBtn8");
+         
 
             var span1 = document.getElementsByClassName("close")[0];
             var span2 = document.getElementsByClassName("close")[1];
             var span3 = document.getElementsByClassName("close")[2];
-            var span4 = document.getElementsByClassName("close")[3];
-            var span5 = document.getElementsByClassName("close")[4];
-            var span8 = document.getElementsByClassName("close")[5];
-
+           
+          
             document
                 .getElementById("name")
                 .innerHTML = Name;
@@ -487,20 +282,7 @@
             document
                 .getElementById("grade3")
                 .innerHTML = Grade3;
-            document
-                .getElementById("grade4")
-                .innerHTML = Grade4;
-            document
-                .getElementById("grade5")
-                .innerHTML = Grade5;
-            document
-                .getElementById("grade6")
-                .innerHTML = Grade6;
-
-                document
-                .getElementById("grade8")
-                .innerHTML = Grade8;
-
+        
             document
                 .getElementById("mygrade1")
                 .innerHTML = Mygrade1;
@@ -510,17 +292,8 @@
             document
                 .getElementById("mygrade3")
                 .innerHTML = Mygrade3;
-            document
-                .getElementById("mygrade4")
-                .innerHTML = Mygrade4;
-            document
-                .getElementById("mygrade5")
-                .innerHTML = Mygrade5;
-           
-            document
-                .getElementById("myarea1")
-                .innerHTML = Myarea1;
-
+      
+       
             document
                 .getElementById("mytotalgrade")
                 .innerHTML = Mytotalgrade;
@@ -532,18 +305,7 @@
                 .getElementById("cangraduate")
                 .innerHTML = Cangraduate;
 
-            document
-                .getElementById("swbook")
-                .innerHTML = Swbook;
-            document
-                .getElementById("sbook")
-                .innerHTML = Sbook;
-            document
-                .getElementById("wbook")
-                .innerHTML = Wbook;
-            document
-                .getElementById("scbook")
-                .innerHTML = Scbook;
+       
 
             toggleb.addEventListener('click', () => {
                 menu
@@ -618,32 +380,24 @@
 
             }
 
-            for (i = 0; i < 8; i++) {
+            for (i = 0; i < 3; i++) {
                 Tooltipeb(tooltipeb[i], text[i]);
             }
             Btnclick(btn1, modal1);
             Btnclick(btn2, modal2);
             Btnclick(btn3, modal3);
-            Btnclick(btn4, modal4);
-            Btnclick(btn5, modal5);
-            Btnclick(btn8, modal8);
+           
 
             Spanclick(span1, modal1);
             Spanclick(span2, modal2);
             Spanclick(span3, modal3);
-            Spanclick(span4, modal4);
-            Spanclick(span5, modal5);
-            Spanclick(span8, modal8);
+           
 
             CircleProgress(pernum0, '#chart0', 250);
             CircleProgress(pernum1, '#chart1', 150);
             CircleProgress(pernum2, '#chart2', 150);
             CircleProgress(pernum3, '#chart3', 150);
-            CircleProgress(pernum4, '#chart4', 150);
-            CircleProgress(pernum5, '#chart5', 150);
-            CircleProgress(pernum6, '#chart6', 150);
-            CircleProgress(pernum7, '#chart7', 150);
-            CircleProgress(pernum8, '#chart8', 150);
+            
 
             window.onclick = function (event) {
                 if (event.target == modal1) {
@@ -655,13 +409,8 @@
                 if (event.target == modal3) {
                     modal3.style.display = "none";
                 }
-                if (event.target == modal4) {
-                    modal4.style.display = "none";
-                }
-                if (event.target == modal5) {
-                    modal5.style.display = "none";
-                }
-              
+             
+             
             }
         </script>
 

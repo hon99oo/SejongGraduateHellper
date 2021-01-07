@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/e8a335040d.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+            rel="stylesheet">
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
             rel="stylesheet">
@@ -16,9 +18,8 @@
     <body>
         <nav class="navbar">
             <div class="navbar_logo">
-              <img
-              src="LogoMakr-4uW6co.png"/>
-      
+                <img src="LogoMakr-4uW6co.png"/>
+
             </div>
 
             <ul class="navbar_menu">
@@ -26,7 +27,8 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Signup</a>
+                    <a id="loginBtn">Signup</a>
+
                 </li>
             </ul>
 
@@ -36,6 +38,7 @@
         </nav>
 
         <div class="container">
+
             <div class="txtcontainer">
                 <p class="lgtxt">
                     당신이 졸업을 할 수 있을지 확인하세요
@@ -43,16 +46,41 @@
                 </p>
 
                 <p class="smtxt">
-                    PleaseGraduate에서 최소한의 정보만 입력하여 모자란 학점, 부족한 영역, 들어야할 과목 추천등을 한눈에 확인하세요
+                    PleaseGraduate에서는 단지 uis 아이디와 비밀번호만 입력하면 자동으로 사용자의 성적을 분석하여 모자란 학점, 부족한 영역, 앞으로 무슨 과목을 들어야하는지 한눈에
+                    보여줍니다
 
                 </p>
-                <button class="signup">
-                    Signup
-                </button>
+
             </div>
-            <div class="imgcontainer">
-                <img
-                    src="https://cdn.dribbble.com/users/43577/screenshots/5962634/specify-dribbble-03_4x.png?compress=1&resize=1200x900"/>
+
+        </div>
+
+        <div id="loginModal" class="modal loginmodal">
+
+            <div class="modal-content login-content">
+
+                <p>
+
+                    <span class="logincap">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="close loginclose">&times;</span>
+                    </span>
+                    <div class="welcome">
+                        PleaseGraduate에 오신 것을 환영합니다
+                    </div>
+
+                    <div class="loginform">
+                        <div class="textbox">
+                            <input type="text" placeholder="Uis 아이디">
+                            <input type="password" placeholder="Uis 비밀번호"></div>
+                        <input type="button" class="login" value="로그인">
+                    </div>
+                    
+                    <div class="explain">계속 진행하면 PleaseGraduate의 <div class="inexplain">서비스 약관, 개인정보 보호정책</div>에 동의한 것으로 간주됩니다.</div>
+                   
+                    <div class="caution">#주의사항# </div>
+                        PleaseGraduate는 chrome브라우저 환경에서만 가능합니다.</div>
+                </p>
             </div>
 
         </div>
@@ -67,6 +95,18 @@
                 .classList
                 .toggle('active');
         });
+        var loginmodal = document.getElementById('loginModal');
+
+        var loginbtn = document.getElementById("loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        loginbtn.onclick = function () {
+            loginmodal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            loginmodal.style.display = "none";
+        }
     </script>
 
 </html>

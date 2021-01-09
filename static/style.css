@@ -554,20 +554,21 @@ strong {
     justify-content: center;
     align-items: center;
     color: gray;
-    margin-bottom: 0;
+    padding: 7px;
+
 
 }
 .footer_list {
     list-style: none;
     font-size: 11px;
-    height: 60px;
+   
     color: lightgrey;
     letter-spacing: 2px;
 
     border-right: 0.1px solid lightgray;
 }
 .footer_list li {
-    margin: 5px 150px 3px 5px;
+    margin: 10px 150px 5px;
     text-align: center;
     margin-left: 130px;
 

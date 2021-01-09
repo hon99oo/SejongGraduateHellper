@@ -21,7 +21,6 @@ from django.contrib import messages
 # 모델 참조
 from .models import *
 
-
 # DB 감지 테스트
 def r_dbcheck(request):
     # model의 test_table 테이블을 변수에 저장
@@ -241,10 +240,16 @@ def r_result(request, file_name, info):
     result_EC = make_recome_df(EC_train,file_name)
     MR_item = result_MR['item'].tolist()
     MR_score = result_MR['score'].tolist()
+    for i in range(len(MR_score)):
+        MR_score[i] = round(MR_score[i] / 2 * 100, 3)
     MC_item = result_MC['item'].tolist()
     MC_score = result_MC['score'].tolist()
+    for i in range(len(MC_score)):
+        MC_score[i] = round(MC_score[i] / 2 * 100, 3)
     EC_item = result_EC['item'].tolist()
     EC_score = result_EC['score'].tolist()
+    for i in range(len(EC_score)):
+        EC_score[i] = round(EC_score[i] / 2 * 100, 3)
 
     recommend_sel_item = {
         'me' : list_to_query(MR_item),
@@ -256,7 +261,9 @@ def r_result(request, file_name, info):
         'ms' : MC_score,
         'cs' : EC_score,
     }
-
+    me_zipped = zip(list_to_query(MR_item), MR_score)
+    ms_zipped = zip(list_to_query(MC_item), MC_score)
+    cs_zipped = zip(list_to_query(EC_item), EC_score)
     context = {
         'my_num' : my_num,
         'user_info' : user_info,
@@ -265,6 +272,10 @@ def r_result(request, file_name, info):
         'recommend_ess' : recommend_ess,
         'recommend_sel_item' : recommend_sel_item,
         'recommend_sel_score' : recommend_sel_score,
+        'a' : len(recommend_sel_score),
+        'me' : me_zipped,
+        'ms' : ms_zipped,
+        'cs' : cs_zipped,
     }
 
     return render(request, "result.html", context)
@@ -282,9 +293,9 @@ def get_Driver(url):
     # options.add_argument("headless")
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # 다운로드될 경로 지정
-    root = os.getcwd() + '\\app\\uploaded_media'
+    root = os.getcwd() + '/app/uploaded_media'
     options.add_experimental_option('prefs', {'download.default_directory' : root} )
-    driver = webdriver.Chrome('./chromedriver.exe', options=options)
+    driver = webdriver.Chrome('/Users/hon99oo/Downloads/chromedriver', options=options)
     driver.get(url)
     return driver
 

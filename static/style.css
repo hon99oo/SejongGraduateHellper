@@ -15,16 +15,15 @@ a {
     align-items: center;
     border-bottom: 1px solid #FAFAFA;
     background-color: white;
-    padding: 8px 8px;
+    padding: 8px;
 }
 
 .navbar_logo img {
     position: relative;
     left: 70px;
     width: 110px;
-    margin: 10px;
-    margin-bottom: 0px;
-    
+    margin: 10px 10px 0;
+
     height: 52px;
 }
 .navbar_menu {
@@ -32,8 +31,7 @@ a {
     font-size: 20px;
     list-style: none;
     padding-left: 0;
-    margin: 0;
-    margin-right: 25px;
+    margin: 0 25px 0 0;
 }
 
 .navbar_menu li {
@@ -55,81 +53,71 @@ a {
     right: 4%;
 }
 
-.logincap{
+.logincap {
     font-size: 50px;
     position: relative;
     left: 15px;
-    
-   
-    
-    
+
 }
 
-.explain{
-    margin : 50px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+.explain {
+    margin: 30px 50px 15px;
     color: gray;
-    
+
 }
 
-.caution{
+.caution {
     color: #d32f2f;
     font-size: 19px;
     font-weight: 600;
-    margin: 10px;
-    
-    margin-bottom: 5px;
+    margin: 10px 10px 5px;
 }
-.inexplain{
- color: black;
- margin: 0;
- display: inline;
- font-weight: 500;   
+.inexplain {
+    color: black;
+    margin: 0;
+    display: inline;
+    font-weight: 500;
 }
-.welcome{
+.welcome {
 
     font-size: 29px;
     font-weight: 700;
     margin: 30px;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 50px;
     letter-spacing: 2px;
- 
+
 }
 
-.loginclose{
+.loginclose {
     position: relative;
-    top:-10px;
+    top: -10px;
     left: 180px;
 }
 .textbox {
     width: 100%;
     height: auto;
     overflow: hidden;
-    
+
     display: flex;
     flex-direction: column;
-    
+
 }
-.textbox input{
+.textbox input {
     font-size: 21px;
     background: none;
     border-style: solid;
     border-color: lightgrey;
     border-width: 3px;
-    
-    padding-left: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    
+
+    padding: 10px 10px 10px 25px;
+
     margin-bottom: 9px;
     outline: 0;
     border-radius: 20px;
 }
-.login{
+.login {
     background: #d32f2f;
     font-size: 20px;
     color: white;
@@ -140,16 +128,16 @@ a {
     border-radius: 50px;
     cursor: pointer;
     outline: 0;
-    padding :10px 130px 10px 130px;
+    padding: 10px 130px;
 }
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height : 1000px;
+    height: 1000px;
     width: 100%;
-    
-    background-image: url(pang-yuhao-_kd5cxwZOK4-unsplash.jpg);
+
+    background-image: url("pang-yuhao-_kd5cxwZOK4-unsplash.jpg");
     background-size: cover;
 }
 .txtcontainer {
@@ -157,13 +145,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-}
 
+}
 
 .lgtxt {
     text-align: center;
-    
+
     font-weight: 800;
     font-size: 42px;
     margin-bottom: 5px;
@@ -171,7 +158,7 @@ a {
 }
 
 .smtxt {
-    
+
     font-size: 22px;
     width: 750px;
     text-align: center;
@@ -192,8 +179,7 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-    
-    
+
     .navbar_logo {
         padding: 10px;
 
@@ -203,21 +189,17 @@ a {
         background-color: white;
 
     }
-    
 
     .txtcontainer {
 
         order: 2;
     }
 
-  
     .signup {
         margin-left: 180px;
         margin-top: -20px;
 
     }
-    
-    
 
 }
 .lcontainer {
@@ -233,7 +215,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    max-width: 100%; 
+    max-width: 100%;
     height: 100%;
     background-color: #F9F8FD;
 
@@ -263,9 +245,9 @@ a {
     border-color: black;
     border-style: solid;
     border-width: 2px;
-    
+
     border-radius: 30px;
-    background-color:  white;
+    background-color: white;
 }
 .container0 {
     min-width: 735px;
@@ -295,11 +277,10 @@ a {
     border-radius: 30px;
     align-items: center;
     position: relative;
-    
-    
+
 }
 .sbox {
-  
+
     margin: 0;
     padding: 0;
     display: flex;
@@ -309,19 +290,19 @@ a {
     flex-wrap: nowrap;
     font-size: 18px;
     border-radius: 15px;
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: 0;
     border-style: solid;
-    border-width: 0px;
+    border-width: 0;
     position: relative;
-    left : -22px;
+    left: -22px;
     width: 180px;
     height: 220px;
 }
-.rbutton{
+.rbutton {
     width: 150px;
     position: relative;
-    background-color:  white;
+    background-color: white;
     border: none;
     outline: 0;
     border-style: solid;
@@ -335,50 +316,50 @@ a {
     cursor: pointer;
 
 }
-.rbutton:hover{
-    background-color:#D7DBD1;
+.rbutton:hover {
+    background-color: #D7DBD1;
 
 }
 .Sbox {
-    background-color:  white;
+    background-color: white;
     margin: 0;
-    
+
     width: 350px;
     height: 280px;
 }
-.gbox{
+.gbox {
     display: flex;
     font-size: 20px;
     font-weight: 600;
     margin: 8px;
     position: relative;
-    top :0px;
+    top: 0;
     letter-spacing: 2px;
     margin-bottom: 5px;
     justify-content: space-around;
     flex-direction: row;
 }
-.q{
+.q {
     position: relative;
     top: -10px;
 }
-.t{
+.t {
     position: relative;
     right: 40px;
     width: 170px;
     margin: 2px;
     text-align: center;
 }
-.T{
+.T {
     font-size: 24px;
     margin-top: 5px;
     position: relative;
-top: 25px;
+    top: 25px;
     left: -50px;
     width: 500px;
     background-color: none;
 }
-.Grade{
+.Grade {
     position: relative;
     left: -70px;
     width: 150px;
@@ -395,129 +376,135 @@ top: 25px;
 }
 strong {
     position: relative;
-    
-    
+
     top: -65px;
     left: -99px;
     text-decoration: none;
 
     font-size: 18px;
 }
-.tooltip{
+.tooltip {
     cursor: pointer;
 }
-.tooltip_text{
+.tooltip_text {
     background-color: #FAFAFA;
     top: -120px;
     left: -35px;
     width: 250px;
-    
+
     height: auto;
-    
+
     box-shadow: 3px 3px 5px black;
-    
+
     padding: 17px;
     color: black;
     border-color: lightgrey;
     border-style: solid;
     border-width: 1.5px;
     display: none;
-    
+
     letter-spacing: 3px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 15px;
     position: absolute;
-    
+
 }
-.r{
+.r {
     width: 50px;
 }
-.grade{
-    color:#424242    ;
+.grade {
+    color: #424242;
     font-weight: 500;
-    
+
     position: relative;
-    top:1px;
+    top: 1px;
     font-size: 18px;
     margin-right: 18px;
 
 }
-.p{
+.p {
     position: relative;
     font-weight: 600;
-    
+
     font-size: 17px;
-    
-    top : 5px;
+
+    top: 5px;
     right: -50px;
     letter-spacing: 5px;
 
 }
 
-.y{
+.y {
     width: 60px;
-    top:1px;
-   
-    margin: 0;
-    margin-right: 10px;
-    
+    top: 1px;
+
+    margin: 0 10px 0 0;
+
 }
 
-.Y{
+.Y {
     position: relative;
     width: auto;
-    
-    top:-17px;
+
+    top: -17px;
 }
-.book{
-    color:#424242    ;
+.book {
+    color: #424242;
     margin: 0;
-  
+
     font-weight: 500;
     position: relative;
-    top:1px;
-    
+    top: 1px;
+
     font-size: 18px;
     margin-left: 10px;
     margin-right: 10px;
 
 }
 
-
-.tooltip_text.active{
+.tooltip_text.active {
     display: block;
 }
-.name title{
+.name title {
     font-size: 50px;
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+    /* Black w/ opacity */
 }
 .modal-content {
     background-color: #fefefe;
     border-radius: 5px;
-    
-    margin: 15% auto; /* 15% from the top and centered */
+
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
     height: 50%;
-    /* Could be more or less, depending on screen size */                          
+    /* Could be more or less, depending on screen size */
 }
-.login-content{
-margin: 2% auto;
+.login-content {
+    margin: 2% auto;
     width: 30%;
     height: 80%;
     display: flex;
@@ -532,30 +519,160 @@ margin: 2% auto;
     font-size: 28px;
     font-weight: bold;
 }
-.close:hover,
-.close:focus {
+.close:focus,
+.close:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-.Gbox{
+.Gbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.cap{
-    
-position: relative;
-display: block;
-height: 10px;
-top : 2px;
+.cap {
 
-left: -55px;
+    position: relative;
+    display: block;
+    height: 10px;
+    top: 2px;
 
+    left: -55px;
 
     margin: 0;
-    
+
     font-size: 35px;
 }
 
+.footer {
+
+    font-size: 12px;
+    background-color:#212121;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    margin-bottom: 0;
+
+}
+.footer_list {
+    list-style: none;
+    font-size: 11px;
+    height: 60px;
+    color: lightgrey;
+    letter-spacing: 2px;
+
+    border-right: 0.1px solid lightgray;
+}
+.footer_list li {
+    margin: 5px 150px 3px 5px;
+    text-align: center;
+    margin-left: 130px;
+
+}
+.copyright {
+    color: grey;
+    font-size: 12px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.loadcontainer{
+    height: 100vh;
+    width: 100%;
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F8FD;
+}
+.loading span {
+    display: inline-block;
+    margin: 0 -.075em;
+    animation: loading .7s infinite alternate;
+  }
+  .loading span:nth-child(2) {
+    animation-delay: .1s;
+  }
+  .loading span:nth-child(3) {
+    animation-delay: .2s;
+  }
+  .loading span:nth-child(4) {
+    animation-delay: .3s;
+  }
+  .loading span:nth-child(5) {
+    animation-delay: .4s;
+  }
+  .loading span:nth-child(6) {
+    animation-delay: .5s;
+  }
+  .loading span:nth-child(7) {
+    animation-delay: .6s;
+  }
+  @keyframes loading {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+.sk-chase {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin :60px;
+    animation: sk-chase 2.5s infinite linear both;
+  }
+  
+  .sk-chase-dot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+  }
+  
+  .sk-chase-dot:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 25%;
+    background-color: #1a237e    ;
+    border-radius: 100%;
+    animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+  }
+  
+  .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+  .sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+  
+  @keyframes sk-chase {
+    100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot {
+    80%, 100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot-before {
+    50% {
+      transform: scale(0.4); 
+    } 100%, 0% {
+      transform: scale(1.0); 
+    } 
+  }

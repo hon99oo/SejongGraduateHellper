@@ -46,21 +46,45 @@
                 </p>
 
                 <p class="smtxt">
-                    PleaseGraduate에서는 단지 uis 아이디와 비밀번호만 입력하면 자동으로 사용자의 성적을 분석하여 모자란 학점, 부족한 영역, 앞으로 무슨 과목을 들어야하는지 한눈에
-                    보여줍니다
+                    PleaseGraduate에서는 단지 uis 아이디와 비밀번호만 입력하면 자동으로 사용자의 성적을 분석하여 모자란 학점, 부족한 영역, 앞으로
+                    무슨 과목을 들어야하는지 한눈에 보여줍니다
 
                 </p>
 
             </div>
 
         </div>
+        <!--푸터-->
+        <footer class="footer">
+            <ul class="footer_list">
+                <li>
+                    Contact Us : 000-0000-0000
+                </li>
+                <li>
+                    Email : fuckyou@gmail.com
+                </li>
+                <li>
+                    Adress : 서울시 중랑구 사가정로 41길 9
+                </li>
+            </ul>
+            <ul class="footer_list">
+                <li>
+                    이용약관
+                </li>
+                <li>
+                    개인정보처리방침
+                </li>
+            </ul>
+            <h2 class="copyright">copyright
+                <i class="far fa-copyright"></i>
+                2021 PleaseGraduate</h2>
+        </footer>
 
+        <!--로그인 모달-->
         <div id="loginModal" class="modal loginmodal">
 
             <div class="modal-content login-content">
-
                 <p>
-
                     <span class="logincap">
                         <i class="fas fa-graduation-cap"></i>
                         <span class="close loginclose">&times;</span>
@@ -73,40 +97,56 @@
                         <div class="textbox">
                             <input type="text" placeholder="Uis 아이디">
                             <input type="password" placeholder="Uis 비밀번호"></div>
-                        <input type="button" class="login" value="로그인">
+                        <input type="button" class="login" onclick='exception()' value="로그인">
                     </div>
-                    
-                    <div class="explain">계속 진행하면 PleaseGraduate의 <div class="inexplain">서비스 약관, 개인정보 보호정책</div>에 동의한 것으로 간주됩니다.</div>
-                   
-                    <div class="caution">#주의사항# </div>
-                        PleaseGraduate는 chrome브라우저 환경에서만 가능합니다.</div>
-                </p>
-            </div>
 
+                    <div class="explain">계속 진행하면 PleaseGraduate의
+                        <div class="inexplain">서비스 약관, 개인정보 보호정책</div>에 동의한 것으로 간주됩니다.</div>
+
+                    <div class="caution">#주의사항#
+                    </div>
+                    <div>PleaseGraduate는 웹 chrome브라우저 환경에서만 가능합니다</div>
+                    <div>Uis와 대양센터의 아이디, 비밀번호가 전부 일치해야합니다</div>
+            </p>
         </div>
 
-    </body>
-    <script>
-        const toggleb = document.querySelector('.navbar_toggle');
-        const menu = document.querySelector('.navbar_menu');
+    </div>
 
-        toggleb.addEventListener('click', () => {
-            menu
-                .classList
-                .toggle('active');
-        });
-        var loginmodal = document.getElementById('loginModal');
+</body>
+<script>
 
-        var loginbtn = document.getElementById("loginBtn");
-        var span = document.getElementsByClassName("close")[0];
+    const toggleb = document.querySelector('.navbar_toggle');
+    const menu = document.querySelector('.navbar_menu');
 
-        loginbtn.onclick = function () {
-            loginmodal.style.display = "block";
+    toggleb.addEventListener('click', () => {
+        menu
+            .classList
+            .toggle('active');
+    });
+    var loginmodal = document.getElementById('loginModal');
+
+    var loginbtn = document.getElementById("loginBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    var loginException = false;  //로그인 예외처리 변수
+
+    loginbtn.onclick = function () {
+        loginmodal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        loginmodal.style.display = "none";
+    }
+
+    //로그인 예외처리 경고창
+    function exception() {
+        if (loginException==true)
+        {
+            window.location.href="loading.html";
         }
-
-        span.onclick = function () {
-            loginmodal.style.display = "none";
-        }
-    </script>
+        else{
+        alert("Uis 아이디와 비밀번호가 틀렸습니다. 다시 확인하세요.")}
+    }
+</script>
 
 </html>

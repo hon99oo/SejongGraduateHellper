@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="670a6571-9dd1-446d-81f6-39f20dc7b240" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graduate Web/app/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Graduate Web/app/templates/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graduate Web/app/uploaded_media/21-01-09 18_27_42.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graduate Web/app/uploaded_media/기이수성적_재현.xls" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Graduate Web/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graduate Web/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +65,7 @@
       <updated>1609744176341</updated>
       <workItem from="1610187964332" duration="546000" />
       <workItem from="1610188604223" duration="230000" />
-      <workItem from="1610188868621" duration="8768000" />
+      <workItem from="1610188868621" duration="10329000" />
     </task>
     <servers />
   </component>

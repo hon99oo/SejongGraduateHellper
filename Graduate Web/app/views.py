@@ -235,11 +235,13 @@ def r_result(request, file_name, info):
     MR_train = pd.concat(MR,ignore_index=True) #전필용 train set
     MC_train = pd.concat(MC,ignore_index=True) #전선용 train set
     EC_train = pd.concat(EC,ignore_index=True) #교선용 train set
-    result_MR = make_recome_df(MR_train,file_name)
-    result_MC = make_recome_df(MC_train,file_name)
-    result_EC = make_recome_df(EC_train,file_name)
+    result_MR = make_recome_df(MR_train,file_name) #전필용 predict
+    result_MC = make_recome_df(MC_train,file_name) #전선용 predict
+    result_EC = make_recome_df(EC_train,file_name) #교선용 predict
+    # 리스트로 변경
     MR_item = result_MR['item'].tolist()
     MR_score = result_MR['score'].tolist()
+    # score 백분율화
     for i in range(len(MR_score)):
         MR_score[i] = round(MR_score[i] / 2 * 100, 3)
     MC_item = result_MC['item'].tolist()
@@ -251,6 +253,16 @@ def r_result(request, file_name, info):
     for i in range(len(EC_score)):
         EC_score[i] = round(EC_score[i] / 2 * 100, 3)
 
+    #새로열린거만 추천해주기.
+    zip_mc = zip(MC_item,MC_score)
+    zip_mr = zip(MR_item,MR_score)
+    zip_ec = zip(EC_item,EC_score)
+    checked_MC_item, checked_MC_score = check_new_lecture_for_recommendation(zip_mc)
+    checked_MR_item, checked_MR_score = check_new_lecture_for_recommendation(zip_mr)
+    checked_EC_item, checked_EC_score = check_new_lecture_for_recommendation(zip_ec)
+
+
+
     recommend_sel_item = {
         'me' : list_to_query(MR_item),
         'ms' : list_to_query(MC_item),
@@ -261,9 +273,9 @@ def r_result(request, file_name, info):
         'ms' : MC_score,
         'cs' : EC_score,
     }
-    me_zipped = zip(list_to_query(MR_item), MR_score)
-    ms_zipped = zip(list_to_query(MC_item), MC_score)
-    cs_zipped = zip(list_to_query(EC_item), EC_score)
+    me_zipped = zip(list_to_query(checked_MR_item), checked_MR_score)
+    ms_zipped = zip(list_to_query(checked_MC_item), checked_MC_score)
+    cs_zipped = zip(list_to_query(checked_EC_item), checked_EC_score)
     context = {
         'my_num' : my_num,
         'user_info' : user_info,
@@ -280,6 +292,16 @@ def r_result(request, file_name, info):
 
     return render(request, "result.html", context)
 
+def check_new_lecture_for_recommendation(zipped):
+    r_num = []
+    r_score = []
+    for s_num, s_score in zipped:
+        nl = NewLecture.objects.filter(subject_num=s_num)
+        # 부족 과목이 열리고 있다면
+        if nl.exists():
+            r_num.append(nl[0].subject_num.subject_num)
+            r_score.append(s_score)
+    return r_num, r_score
 
 def r_en_result(request):
     return render(request, "en_result.html")

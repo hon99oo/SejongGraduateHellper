@@ -20,6 +20,8 @@ from django.core.files.storage import FileSystemStorage
 from django.contrib import messages
 # 모델 참조
 from .models import *
+import get_uis
+import get_daeyang
 
 # DB 감지 테스트
 def r_dbcheck(request):
@@ -416,15 +418,20 @@ def selenium_book(id, pw):
 
 def f_login(request):
     # 셀레니움으로 서버(uploaded_media)에 엑셀 다운
-    selenium_uis(request.POST.get('id'), request.POST.get('pw'))
+    # 리퀘스트가 들어오면 클래스 2개 객체화해서
+    info = get_daeyang.Daeyang(request.POST.get('id'), request.POST.get('pw')).return_info()
+    #selenium_uis(request.POST.get('id'), request.POST.get('pw')) # -> 이부분이 함수호출하는부분
+    info['Eng'] = get_uis.Uis(request.POST.get('id'), request.POST.get('pw')).get_uis()
+
+    # 여기서
     # 다운로드 후 이름 변경
     file_name = time.strftime('%y-%m-%d %H_%M_%S') + '.xls'
     Initial_path = './app/uploaded_media'
     filename = max([Initial_path + "/" + f for f in os.listdir(Initial_path)],key=os.path.getctime)
     shutil.move(filename,os.path.join(Initial_path,file_name))
     # 대양휴머니티 크롤링 후 학과/학번/인증권수 넘기기
-    context = selenium_book(request.POST.get('id'), request.POST.get('pw'))
-    return r_result(request, file_name, context)
+    #context = selenium_book(request.POST.get('id'), request.POST.get('pw'))
+    return r_result(request, file_name, info)
 
 #---------------------------------------------------------------------------------------------------------------
 
@@ -628,7 +635,6 @@ def result_test(request):
     }
 
     return render(request, "result.html", context)
-
 
 
 

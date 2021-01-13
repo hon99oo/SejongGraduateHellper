@@ -60,6 +60,7 @@ class Uis():
         self.driver.switch_to.frame(0)
         # 다운로드 버튼 x_path 클릭
         self.driver.find_element_by_xpath('''//*[@id="btnDownload_btn"]''').click()
+        time.sleep(2)
         # ------------------------------------------ 영어 가져오는 part
         self.driver.switch_to_default_content()
         self.driver.switch_to.frame(2)
@@ -78,7 +79,7 @@ class Uis():
 
         self.driver.find_element_by_xpath('//*[@id="ckb2_item0"]/table/tbody/tr/td/table/tbody/tr/td/input').click()
         self.driver.find_element_by_id('btnClose_btn').click()
-
+        time.sleep(2)
         #print(driver.current_window_handle)
         self.driver.switch_to_window(self.driver.window_handles[0]) # 다시 uis 창으로 윈도우 바꿔놓기
         self.driver.switch_to_frame(3) # 이 사이트에서는 프레임 0 - 3 총 4개
@@ -93,9 +94,10 @@ class Uis():
 
         if k == '불합격':  self.eng  = False
         elif k == '합격' : self.eng = True
+        self.driver.quit()
 
-        return k
-
+    def return_eng(self):
+        return self.eng
 
 
 # ---------------------------------------------------------------------------------------------

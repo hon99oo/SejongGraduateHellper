@@ -419,10 +419,12 @@ def selenium_book(id, pw):
 def f_login(request):
     # 셀레니움으로 서버(uploaded_media)에 엑셀 다운
     # 리퀘스트가 들어오면 클래스 2개 객체화해서
-    info = get_daeyang.Daeyang(request.POST.get('id'), request.POST.get('pw')).return_info()
+    D =  get_daeyang.Daeyang(request.POST.get('id'), request.POST.get('pw'))
+    info = D.return_info()
     #selenium_uis(request.POST.get('id'), request.POST.get('pw')) # -> 이부분이 함수호출하는부분
-    info['Eng'] = get_uis.Uis(request.POST.get('id'), request.POST.get('pw')).get_uis()
-
+    # info['Eng'] = get_uis.Uis(request.POST.get('id'), request.POST.get('pw')).get_uis()
+    #U = get_uis.Uis(request.POST.get('id'), request.POST.get('pw'))
+    #info['english'] = U.get_uis()
     # 여기서
     # 다운로드 후 이름 변경
     file_name = time.strftime('%y-%m-%d %H_%M_%S') + '.xls'

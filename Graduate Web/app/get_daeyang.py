@@ -28,11 +28,11 @@ class Daeyang:
     book_pass = ""
     name = ""
     info = {
-        'book' :[],
-        'major': '',
         'id': '',
-        'year': '',
         'name': '',
+        'major': '',
+        'year': '',
+        'book': [],
         'book_pass' :''
     }
     def __init__(self , id , password): # 아이디 패스워드 받아서 진행시키기
